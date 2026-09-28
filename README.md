@@ -4,6 +4,8 @@ This project is a self-motivated project on stock market prices to demonstrate d
 
 The historical data of three stocks - HSBC (0005.HK), Tencent (0700.HK), and HKEX (0388.HK) over the past ~6.5 years (2020-2026) are studied alongside the data of Hang Seng Index (HSI). The OHLCV data of these four instruments are then put through a full analytical pipeline, which includes ingestion, cleaning, relational storage, and SQL-driven data analysis. In addition to understanding what each quantifiable figure represents during data analysis, the results are also compared to the real market events, where the fluctuations can be interpreted as a result of these events.
 
+The Python scripts can be found in the folder `scripts/` and will be discussed in this introductory file.
+
 ---
 
 ## Tech Stack
