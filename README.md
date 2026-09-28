@@ -71,5 +71,5 @@ The rolling correlation and beta with a 60-day window is also calculated to comp
 
 ## Results
 
-1. volatile period
+1. volatile period (Covid-19, middle east crises, US tariff)
 2. Moving averages and Cross detection
