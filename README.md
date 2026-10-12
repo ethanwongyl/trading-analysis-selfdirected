@@ -41,7 +41,7 @@ The percentage change between the closing prices of a particular day and the pre
 
 __Volatility__
 
-By calculating the sample standard deviation `STDDEV_SAMP()` over a 20-day rolling window, the volatilities of the stocks are returned. The volatility of a stock tells us how fluctuated a stock is to its mean return. The volatilities are also annualised with a multiplier of √252, the generalised number of trading days in a stock market. One point to note here is that a sample standard deviation is used instead of the population standard deviation as we formulate the rolling volatility within a small moving period (20 days), which result in a ~2.6% difference in calculation.
+By calculating the sample standard deviation `STDDEV_SAMP()` over a 20-day rolling window, the volatilities of the stocks are returned. The volatility of a stock tells us how fluctuated a stock is to its mean return. The volatilities are also annualised with a multiplier of √252, the generalised number of trading days in a stock market. The annualisation allows us to scale the 20-day volatility up, so that the figures can be compared easily. One point to note here is that a **sample** standard deviation is used instead of the population standard deviation as we formulate the rolling volatility within a small moving period (20 days), which result in a ~2.6% difference in calculation.
 
 The most volatile periods of these stocks are identified, then compared to market events in the past to find how these events affected the stock market.
 
@@ -71,5 +71,27 @@ The rolling correlation and beta with a 60-day window is also calculated to comp
 
 ## Results
 
-1. volatile period (Covid-19, middle east crises, US tariff)
+1. Volatile periods (COVID-19, middle east crises, US tariff)
+
+The first intersting figure from the stocks comes from the volatility of the stock prices. The average 20-day annualised volatility between 2020 to 2026 is calculated to be ~24.25%, which agrees with online figures. In this period, two crisis periods have been discovered, and they both relate to a significant market crisis respectively. The most volatile period emerged in 2025, when the United States introduced the 'Liberation Day' tariffs on 5th April, which directly affected the transaction volume for the United States-China trade corridors. As the HSBC plays a crucial role as the primary financial bridge between the U.S. and China, it would certainly be affected the most. On 7th April, the HSBC stock price plummeted over 14% within a day. Such a crash caused a series of whipsaw trading in both directions, and the 20-day annualised volatility recorded a maximum of 64.4% in April 2025.
+
+The second most volatile period is a result of the COVID-19 in March 2020, reaching a maximum of 55.6%. Lockdowns, quarantines, and business closures halted spendings and corporate operations, which stopped the market from functioning normally. Rapid selling of equities also resulted from investors' loss of confidence in the market, causing a crash in the market. 
+
+Earlier this year, the Middle East crisis caused the HSBC to reach a loss of $32 million USD in the second quarter, causing a fluctuation in the HSBC shares. During March to April 2026, the volatility of HSBC stock price reached a maximum of 48.9%, which is roughly double the normal baseline. Such geopolitical unsteadiness usually cause the financial market to fluctuate and are worth taking notes of.
+   
 2. Moving averages and Cross detection
+
+Apart from the false detection in 2020 that was ruled out because of insufficient data points (please refer to __Cross Detection__), there are 5 cross detections recorded over the course of 5.5 years.
+
+| Date | close | Cross Signal |
+| --- | --- | --- |
+| 2020-12-22 | 28.18 | Gold |
+| 2021-08-27 | 31.15 | Death |
+| 2021-12-06 | 33.26 | Gold |
+| 2022-09-08 | 36.85 | Death |
+| 2023-01-19 | 43.85 | Gold |
+
+These signals are consequential effects of COVID-19 and the policies regarding this in China and Hong Kong. There were a few recovery periods from 2021 to 2023, but a combination of China's zero-COVID policy and the other market events caused two death crosses. The end of China's zero-COVID policy in December 2022 marked the start of the recovery period and led to the gold signal in January 2023.
+
+<img width="980" height="524" alt="image" src="https://github.com/user-attachments/assets/dbced814-8375-4411-81be-1439ad0f10a3" />
+
